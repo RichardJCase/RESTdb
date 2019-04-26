@@ -100,7 +100,7 @@ function RESTdbServer(initialPermissions){
 	}
     }
     
-    this.start = function(){
+    this.start = function(port){
 	http.createServer(function (request, response) {
 	    var responseObject = new Response();
 	    response.writeHead(200, {'Content-Type': 'application/json'});
@@ -114,6 +114,6 @@ function RESTdbServer(initialPermissions){
 	    }
 	    
 	    sendResponse(response, request, query, responseObject);
-	}).listen(8081);
+	}).listen(port);
     }
 }
