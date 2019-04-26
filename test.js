@@ -6,5 +6,5 @@ var permissions = {
     "54321" : READ
 };
 
-new Server.RESTdbServer(permissions).start();
+new Server.RESTdbServer(permissions).start(8081);
 //http://127.0.0.1:8081/?key=12345&query=SELECT%20*%20FROM%20users;
